@@ -246,5 +246,5 @@ This dramatically improves query speed on very large datasets.
 
 ### 📄 License
 
--Distributed under the MIT License. See LICENSE for more information.
+- Distributed under the MIT License. See LICENSE for more information.
 # smart_inventory
