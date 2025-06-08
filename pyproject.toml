@@ -1,0 +1,12 @@
+# pyproject.toml
+
+[tool.mypy]
+python_version = "3.11"  # Or your specific Python version
+warn_return_any = true
+warn_unused_configs = true
+
+# This tells mypy that when it runs, all absolute imports
+# (like `app.db.base`) are valid from the project root.
+# It resolves the ambiguity.
+explicit_package_bases = true
+namespace_packages = true
