@@ -257,9 +257,12 @@ This dramatically improves query speed on very large datasets.
 
 - To effectively test the application's performance, especially for endpoints that handle large datasets, complex joins, and partitioned tables, a utility script is provided to populate the database with mock data.
 - This script uses the Faker and faker-commerce libraries to generate a large volume of realistic-looking data for suppliers, products, orders, and inventory movements. It also includes a progress bar using tqdm for a better user experience during long-running seeding operations.
+
 ### How to Use the Seeding Script
+
 The script is run from the command line in your project's root directory. Make sure your virtual environment is activated and the database container is running before executing these commands.
 ## 1. Basic Seeding
+
 - This command populates the database with a default number of records (50 suppliers, 500 products, and 2000 orders).
 
 ```bash
