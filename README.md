@@ -91,9 +91,13 @@ The project is structured to enforce separation of concerns, making it easy to m
 │   │       ├── product.py
 │   │       └── supplier.py
 │   ├── docker-compose.yml
+│   ├── example.env
 │   ├── pyproject.toml
 │   ├── README.md
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── scripts
+│       ├── __init__.py
+│       └── seed.py
 
 
 ```
@@ -247,4 +251,41 @@ This dramatically improves query speed on very large datasets.
 ### 📄 License
 
 - Distributed under the MIT License. See LICENSE for more information.
-# smart_inventory
+
+
+🌱 Seeding the Database with Test Data
+
+- To effectively test the application's performance, especially for endpoints that handle large datasets, complex joins, and partitioned tables, a utility script is provided to populate the database with mock data.
+- This script uses the Faker and faker-commerce libraries to generate a large volume of realistic-looking data for suppliers, products, orders, and inventory movements. It also includes a progress bar using tqdm for a better user experience during long-running seeding operations.
+### How to Use the Seeding Script
+The script is run from the command line in your project's root directory. Make sure your virtual environment is activated and the database container is running before executing these commands.
+## 1. Basic Seeding
+- This command populates the database with a default number of records (50 suppliers, 500 products, and 2000 orders).
+
+```bash
+python -m scripts.seed
+```
+
+## 2. Clean and Seed (Recommended for Testing)
+- The --clean flag is highly recommended for a fresh test run. It will delete all existing data from the tables in the correct order (respecting foreign key constraints) before populating them again.
+
+```bash
+python -m scripts.seed --clean
+```
+
+## 3. Large-Scale Seeding for Performance Testing
+
+- You can specify the exact number of records to generate using command-line arguments. This is ideal for stress-testing your database indexes, partitions, and complex query endpoints.
+
+```bash
+python -m scripts.seed --clean --suppliers 100 --products 2000 --orders 10000
+```
+
+### Available arguments:
+
+- clean: Deletes all data before seeding.
+- suppliers `<number>`: Sets the number of suppliers to create.
+- products `<number>`: Sets the number of products to create.
+- orders `<number>`: Sets the number of orders to create.
+
+

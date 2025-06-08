@@ -16,6 +16,8 @@ class MovementType(str, enum.Enum):
 
 
 class InventoryMovement(Base):
+    __tablename__ = "inventory_movement"
+
     id: Mapped[int] = mapped_column(primary_key=True)
     product_id: Mapped[int] = mapped_column(
         ForeignKey("product.id"), nullable=False, index=True
