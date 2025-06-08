@@ -52,8 +52,6 @@ The project is structured to enforce separation of concerns, making it easy to m
 ├── smart_inventory
 │   ├── alembic
 │   │   ├── env.py
-│   │   ├── __pycache__
-│   │   │   └── env.cpython-311.pyc
 │   │   ├── README
 │   │   ├── script.py.mako
 │   │   └── versions
@@ -63,7 +61,6 @@ The project is structured to enforce separation of concerns, making it easy to m
 │   │       ├── c5650216bf89_add_order_and_order_item_tables.py
 │   │       ├── d8fed3de84eb_create_stock_valuation_view.py
 │   │       ├── e1791914e43a_create_partitioned_inventory_movement_.py
-│   │       └── __pycache__
 │   ├── alembic.ini
 │   ├── app
 │   │   ├── api
