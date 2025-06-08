@@ -115,7 +115,7 @@ Follow these instructions to set up and run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/harshad208/smart_inventory.git
 cd smart_inventory
 ```
 
