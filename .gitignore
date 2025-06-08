@@ -1,0 +1,103 @@
+# --- Byte-compiled / optimized / DLL files ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- C extensions ---
+*.so
+
+# --- Distribution / packaging ---
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Secrets and Environment Variables (IMPORTANT!) ---
+# Never commit your environment variables or secrets files.
+.env
+*.env
+.env.*
+!/.env.example
+
+# --- Python virtual environments ---
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- IDE / Editor-specific files ---
+# Visual Studio Code
+.vscode/
+# PyCharm
+.idea/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+# Atom
+.atom/
+# Eclipse
+.project
+.pydevproject
+.settings/
+
+# --- Test & Coverage Reports ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.prof
+*.lprof
+*.cprof
+
+# --- Alembic ---
+# The alembic.ini file should be versioned, but sometimes
+# temporary environment files are created.
+.alembic-env
+
+# --- Database ---
+# Local database files (if you were using SQLite)
+*.db
+*.sqlite3
+# Local database data dumps/backups
+*.sql
+*.bak
+
+# --- Logs and Runtimes ---
+logs/
+*.log
+*.log.*
+*.pid
+*.pid.lock
+
+# --- OS-specific files ---
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Linux
+*~
+
+# --- Scripts artifacts (if any) ---
+# For instance, if your seed script generated a report
+# seed_report.txt
+
+# --- MyPy cache ---
+.mypy_cache/
